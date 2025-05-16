@@ -1,12 +1,3 @@
-"""
-msg_path
-    - messages type for input to path follower
-    
-part of mavsim_python
-    - Beard & McLain, PUP, 2012
-    - Last update:
-        3/11/2019 - RWB
-"""
 import numpy as np
 
 

@@ -1,12 +1,3 @@
-"""
-mavsim_python: drawing tools
-    - Beard & McLain, PUP, 2012
-    - Update history:
-        4/15/2019 - RWB
-        3/30/2022 - RWB
-        7/13/2023 - RWB
-        3/25/2024 - RWB
-"""
 
 import numpy as np
 from planners.dubins_parameters import DubinsParameters

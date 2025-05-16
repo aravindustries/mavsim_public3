@@ -1,12 +1,3 @@
-"""
-mavsim_python: drawing tools
-    - Beard & McLain, PUP, 2012
-    - Update history:
-        4/15/2019 - RWB
-        3/30/2022 - RWB
-        4/1/2022 - RWB
-"""
-
 import numpy as np
 from message_types.msg_path import MsgPath
 

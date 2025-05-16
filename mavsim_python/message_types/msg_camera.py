@@ -1,12 +1,3 @@
-"""
-msg_camera
-    - messages type output of camera
-    
-part of mavsim
-    - Beard & McLain, PUP, 2012
-    - Updated:
-        4/1/2022 - RWB
-"""
 import parameters.camera_parameters as CAM
 
 

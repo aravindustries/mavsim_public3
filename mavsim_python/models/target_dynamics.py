@@ -1,11 +1,3 @@
-"""
-target_dynamics
-    - this file implements the dynamic equations of motion for ground target moving along city streets
-part of mavsim
-    - Beard & McLain, PUP, 2012
-    - Update history:  
-        3/30/2022 - RWB
-"""
 import numpy as np
 
 # load message types

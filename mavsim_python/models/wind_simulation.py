@@ -1,8 +1,3 @@
-"""
-Class to determine wind velocity at any given moment,
-calculates a steady wind speed and uses a stochastic
-process to represent wind gusts. (Follows section 4.4 in uav book)
-"""
 from tools.transfer_function import TransferFunction
 import numpy as np
 

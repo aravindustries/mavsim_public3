@@ -1,13 +1,3 @@
-"""
-msg_delta
-    - messages type for input to the aircraft
-    
-part of mavsim
-    - Beard & McLain, PUP, 2012
-    - Last update:
-        2/27/2020 - RWB
-        4/6/2022 - RWB
-"""
 import numpy as np
 
 

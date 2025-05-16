@@ -1,13 +1,3 @@
-"""
-msg_waypoints
-    - messages type for input to path manager
-    
-part of mavsim_python
-    - Beard & McLain, PUP, 2012
-    - Last update:
-        3/26/2019 - RWB
-        3/31/2020 - RWB
-"""
 import numpy as np
 
 

@@ -1,4 +1,3 @@
-# rrt dubins path planner for mavsim_python
 import numpy as np
 from message_types.msg_waypoints import MsgWaypoints
 from planners.dubins_parameters import DubinsParameters

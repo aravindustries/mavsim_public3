@@ -1,12 +1,3 @@
-"""
-msg_map
-    - messages type for map of the world
-    
-part of mavsim_python
-    - Beard & McLain, PUP, 2012
-    - Last update:
-        4/10/2019 - RWB
-"""
 import numpy as np
 import parameters.planner_parameters as PLAN
 

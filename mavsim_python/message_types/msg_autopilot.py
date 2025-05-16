@@ -1,12 +1,3 @@
-"""
-msg_autopilot
-    - messages type for input to the autopilot
-    
-part of mavsim_python
-    - Beard & McLain, PUP, 2012
-    - Last update:
-        2/5/2019 - RWB
-"""
 
 
 class MsgAutopilot:

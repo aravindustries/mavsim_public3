@@ -1,11 +1,3 @@
-"""
-point_gimbal
-    - point gimbal at target
-part of mavsim
-    - Beard & McLain, PUP, 2012
-    - Update history:  
-        3/31/2022 - RWB
-"""
 import numpy as np
 from tools.rotations import Euler2Rotation
 import parameters.camera_parameters as CAM

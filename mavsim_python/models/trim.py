@@ -1,9 +1,3 @@
-"""
-compute_trim 
-    - Chapter 5 assignment for Beard & McLain, PUP, 2012
-    - Update history:  
-        12/29/2018 - RWB
-"""
 import numpy as np
 from scipy.optimize import minimize
 from tools.rotations import euler_to_quaternion

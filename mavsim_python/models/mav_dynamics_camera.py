@@ -1,13 +1,3 @@
-"""
-mavDynamics 
-    - this file implements the dynamic equations of motion for MAV
-    - use unit quaternion for the attitude state
-    
-mavsim_python
-    - Beard & McLain, PUP, 2012
-    - Update history:  
-        2/24/2020 - RWB
-"""
 import numpy as np
 from message_types.msg_sensors import MsgSensors
 import parameters.aerosonde_parameters as MAV

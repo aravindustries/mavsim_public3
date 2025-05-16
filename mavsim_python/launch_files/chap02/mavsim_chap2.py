@@ -1,13 +1,3 @@
-"""
-mavsimPy
-    - Chapter 2 launch file for Beard & McLain, PUP, 2012
-    - Update history:  
-        12/27/2018 - RWB
-        1/17/2019 - RWB
-        1/5/2023 - David L. Christiansen
-        7/13/2023 - RWB
-        1/16/2024 - RWB
-"""
 import os, sys
 # insert parent directory at beginning of python search path
 from pathlib import Path

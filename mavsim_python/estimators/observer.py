@@ -282,7 +282,3 @@ class Observer:
 
         y = np.array([[pn], [pe], [Vg], [chi]])
         return y
-
-
-
-
