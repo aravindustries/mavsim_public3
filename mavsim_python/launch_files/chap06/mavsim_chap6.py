@@ -20,7 +20,7 @@ from models.mav_dynamics_control import MavDynamics
 from models.wind_simulation import WindSimulation
 # from controllers.autopilot import Autopilot
 #from controllers.autopilot_tecs import Autopilot
-from controllers.autopilot_lqr import Autopilot
+from controllers.autopilot import Autopilot
 from viewers.view_manager import ViewManager
 import time
 
@@ -31,8 +31,8 @@ wind = WindSimulation(SIM.ts_simulation)
 mav = MavDynamics(SIM.ts_simulation)
 autopilot = Autopilot(SIM.ts_simulation)
 viewers = ViewManager(animation=True, 
-                      data=False,
-                      video=True, video_name='chap6b.mp4')
+                      data=True,
+                      video=False)
 
 # autopilot commands
 from message_types.msg_autopilot import MsgAutopilot
@@ -52,7 +52,15 @@ course_command = Signals(dc_offset=np.radians(180),
 
 # initialize the simulation time
 sim_time = SIM.start_time
-end_time = 200
+end_time = 100
+
+# Lists for RMSE logging
+true_Va_log = []
+cmd_Va_log = []
+true_alt_log = []
+cmd_alt_log = []
+true_chi_log = []
+cmd_chi_log = []
 
 # main simulation loop
 print("Press 'Esc' to exit...")
@@ -78,17 +86,35 @@ while sim_time < end_time:
         commanded_state=commanded_state,  # commanded states
         delta=delta, # inputs to MAV
     )
-       
+
+    # Log the states
+    true_Va_log.append(mav.true_state.Va)
+    cmd_Va_log.append(commanded_state.Va)
+
+    true_alt_log.append(mav.true_state.altitude)
+    cmd_alt_log.append(commanded_state.altitude)
+
+    true_chi_log.append(mav.true_state.chi)
+    cmd_chi_log.append(commanded_state.chi)
+
     # -------Check to Quit the Loop-------
     # if quitter.check_quit():
     #     break
 
     # -------increment time-------------
     sim_time += SIM.ts_simulation
-    time.sleep(0.002) # slow down the simulation for visualization
+    time.sleep(0.001) # slow down the simulation for visualization
 
 viewers.close(dataplot_name="ch6_data_plot")
 
+def compute_rmse(true_vals, cmd_vals):
+    return np.sqrt(np.mean((np.array(true_vals) - np.array(cmd_vals))**2))
 
+Va_rmse = compute_rmse(true_Va_log, cmd_Va_log)
+alt_rmse = compute_rmse(true_alt_log, cmd_alt_log)
+chi_rmse = compute_rmse(true_chi_log, cmd_chi_log)
 
-
+print(f"\n--- Simulation RMSE ---")
+print(f"Airspeed RMSE: {Va_rmse:.2f} m/s")
+print(f"Altitude RMSE: {alt_rmse:.2f} m")
+print(f"Course RMSE: {np.degrees(chi_rmse):.2f} deg")

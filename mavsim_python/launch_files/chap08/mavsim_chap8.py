@@ -1,13 +1,3 @@
-"""
-mavsim_python
-    - Chapter 8 assignment for Beard & McLain, PUP, 2012
-    - Last Update:
-        2/21/2019 - RWB
-        2/24/2020 - RWB
-        1/5/2023 - David L. Christiansen
-        7/13/2023 - RWB
-        3/11/2024 - RWB
-"""
 import os, sys
 # insert parent directory at beginning of python search path
 from pathlib import Path
